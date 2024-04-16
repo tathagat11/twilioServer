@@ -14,7 +14,9 @@ const accountSidOTP = process.env.ACCOUNT_SID_OTP;
 const authTokenOTP = process.env.AUTH_TOKEN_OTP;
 const serviceSidOTP = process.env.SERVICE_SID;
 const client = twilio(accountSidOTP, authTokenOTP);
-
+app.get("/",(req,res)=>{
+    res.status(200).json({message:"Hi"})
+})
 app.post("/send-otp", async (req, res) => {
     const { phoneNumber } = req.body;
     console.log("reached")
