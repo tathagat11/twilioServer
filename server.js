@@ -52,6 +52,14 @@ app.post("/verify-otp", async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Server is listening on port ${port}`);
+// });
+
+const server = () => {
+    app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
+  };
+  
+  server();
