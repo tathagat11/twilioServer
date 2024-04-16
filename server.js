@@ -17,7 +17,7 @@ const client = twilio(accountSidOTP, authTokenOTP);
 
 app.post("/send-otp", async (req, res) => {
     const { phoneNumber } = req.body;
-    
+    console.log("reached")
     try {
         const verification = await client.verify.services(serviceSidOTP)
             .verifications
